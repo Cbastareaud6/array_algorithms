@@ -4,6 +4,8 @@ import java.security.SecureRandom;
 import java.util.Random;
 
 public class Scratch {
+
+
   public static void main(String[] args) {
     long timerStart;
 
@@ -34,6 +36,8 @@ public class Scratch {
 //    System.out.printf("Shuffled values = %s%n", Arrays.toString(data));
     }
   }
+
+
 
 
 }
