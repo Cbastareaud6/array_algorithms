@@ -1,6 +1,9 @@
 package edu.cnm.deepdive;
 
 import java.security.SecureRandom;
+import java.util.ArrayList;
+import java.util.Collections;
+import java.util.List;
 import java.util.Random;
 
 public class Scratch {
@@ -30,9 +33,17 @@ public class Scratch {
     for (int i = 0; i < data.length; i++) {
       data[i] = i;
     }
+
+    List<Integer> datalist = new ArrayList<>(size);
+    for (int value : data) {
+      datalist.add(value);
+    }
 //    System.out.printf("Unshuffled values = %s%n", Arrays.toString(data));
     for (int i = 0; i < repetitions; i++) {
-      shuffler.shuffle(data);
+
+      Collections.shuffle(datalist, rng);
+
+//      shuffler.shuffle(data);
 //    System.out.printf("Shuffled values = %s%n", Arrays.toString(data));
     }
   }
