@@ -9,6 +9,7 @@ import java.util.Random;
  */
 public class Shuffler {
 
+
   private final Random rng;
 
   /**
@@ -23,45 +24,103 @@ public class Shuffler {
     this.rng = rng;
   }
 
+  /**
+   * Shuffle the context of {@code data} and draw a sample of item to be copied to a new array.
+   * @param data  Array to be shuffled
+   * @param drawSize  Size of items to be shuffled and copied to a new array
+   * @return
+   */
   public int[] draw(int[] data, int drawSize){
     shuffle(data, drawSize);
     return Arrays.copyOfRange(data, data.length - drawSize, data.length);
   }
+
+  /**
+   * Shuffle the context of {@code data} and draw a sample of item to be copied to a new array.
+   * @param data  Array to be shuffled
+   * @param drawSize  Size of items to be shuffled and copied to a new array
+   * @return
+   */
 
   public double[] draw(double[] data, int drawSize){
     shuffle(data, drawSize);
     return Arrays.copyOfRange(data, data.length - drawSize, data.length);
   }
 
+  /**
+   * Shuffle the context of {@code data} and draw a sample of item to be copied to a new array.
+   * @param data  Array to be shuffled
+   * @param drawSize  Size of items to be shuffled and copied to a new array
+   * @return
+   */
   public float[] draw(float[] data, int drawSize){
     shuffle(data, drawSize);
     return Arrays.copyOfRange(data, data.length - drawSize, data.length);
   }
 
+  /**
+   * Shuffle the context of {@code data} and draw a sample of item to be copied to a new array.
+   * @param data  Array to be shuffled
+   * @param drawSize  Size of items to be shuffled and copied to a new array
+   * @return
+   */
+
   public boolean[] draw(boolean[] data, int drawSize){
     shuffle(data, drawSize);
     return Arrays.copyOfRange(data, data.length - drawSize, data.length);
   }
+  /**
+   * Shuffle the context of {@code data} and draw a sample of item to be copied to a new array.
+   * @param data  Array to be shuffled
+   * @param drawSize  Size of items to be shuffled and copied to a new array
+   * @return
+   */
 
   public short[] draw(short[] data, int drawSize){
     shuffle(data, drawSize);
     return Arrays.copyOfRange(data, data.length - drawSize, data.length);
   }
 
+  /**
+   * Shuffle the context of {@code data} and draw a sample of item to be copied to a new array.
+   * @param data  Array to be shuffled
+   * @param drawSize  Size of items to be shuffled and copied to a new array
+   * @return
+   */
+
   public long[] draw(long[] data, int drawSize){
     shuffle(data, drawSize);
     return Arrays.copyOfRange(data, data.length - drawSize, data.length);
   }
 
+  /**
+   * Shuffle the context of {@code data} and draw a sample of item to be copied to a new array.
+   * @param data  Array to be shuffled
+   * @param drawSize  Size of items to be shuffled and copied to a new array
+   * @return
+   */
   public byte[] draw(byte[] data, int drawSize){
     shuffle(data, drawSize);
     return Arrays.copyOfRange(data, data.length - drawSize, data.length);
   }
 
+  /**
+   * Shuffle the context of {@code data} and draw a sample of item to be copied to a new array.
+   * @param data  Array to be shuffled
+   * @param drawSize  Size of items to be shuffled and copied to a new array
+   * @return
+   */
   public Object[] draw(Object[] data, int drawSize){
     shuffle(data, drawSize);
     return Arrays.copyOfRange(data, data.length - drawSize, data.length);
   }
+
+  /**
+   * Shuffle the context of {@code data} and draw a sample of item to be copied to a new array.
+   * @param data  Array to be shuffled
+   * @param drawSize  Size of items to be shuffled and copied to a new array
+   * @return
+   */
 
   public char[] draw(char[] data, int drawSize){
     shuffle(data, drawSize);
@@ -161,9 +220,6 @@ public class Shuffler {
   public void shuffle(byte[] data) {
     shuffle(data, data.length-1);
   }
-
-
-
 
 
 
@@ -271,6 +327,8 @@ public class Shuffler {
 
     }
   }
+
+
 
   private void shuffle(byte[] data, int drawSize) {
     for (int targetIndex = data.length -1; targetIndex >= data.length - drawSize; targetIndex --){
