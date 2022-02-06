@@ -11,11 +11,15 @@ public class Lottery {
 
 
 
+
   private final int poolSize;
-  private final int drawSize;
+  private  final int drawSize;
   private final Random rng;
   private final Shuffler s;
   private int[] pool;
+  final int POOLSIZE = 80;
+  final int DRAWSIZE = 5;
+
 
   /**
    * Initializes our lottery object with a specified pool size, a specified draw size
@@ -23,13 +27,27 @@ public class Lottery {
    * @param args
    */
   public Lottery(String[] args) {
-    poolSize = Integer.parseInt(args[0]);
-    drawSize = Integer.parseInt(args[1]);
+    if ( args.length == 0) {
+      poolSize = POOLSIZE;
+
+    } else {
+      poolSize = Integer.parseInt(args[0]);
+    }
+
+    if (args.length <2) {
+      drawSize = DRAWSIZE;
+
+    } else {
+      drawSize = Integer.parseInt(args[1]);
+
+    }
+
     rng = new SecureRandom();
     s = new Shuffler(rng);
     pool = new int[poolSize];
     for (int i = 0; i < poolSize; i++) {
       pool[i] = i + 1;
+
     }
 
   }
