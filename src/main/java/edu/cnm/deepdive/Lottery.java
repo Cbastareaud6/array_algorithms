@@ -82,8 +82,22 @@ public class Lottery {
    */
   public static void main(String[] args) {
     Lottery lotto = new Lottery(args);
-    int[] draw = lotto.draw(true);
-    lotto.display(draw);
+
+    int[] draw = new int[0];
+    for (int i = 0; i < 2; i++) {
+
+      if (args.length > 2) {
+        i = Integer.parseInt(args[2]);
+      }
+
+        draw = lotto.draw(true);
+
+
+      lotto.display(draw);
+    }
+
+
+
 
    }
 
